@@ -29,5 +29,8 @@ def logout_admin(request):
         logout(request)
         return redirect('login_admin')
 
+def website_main(request):
+    return render(request, 'adminpanel/website/index.html')
+
 def admin(request):
     return  render(request, 'adminpanel/statistics.html')
