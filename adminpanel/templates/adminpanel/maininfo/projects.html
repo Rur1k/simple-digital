@@ -1,0 +1,66 @@
+{% extends 'adminpanel/base.html' %}
+{% load static %}
+{% block title %}Проекты{% endblock %}
+{% block page_name %}Проекты{% endblock %}
+{% block mini_page_name %}Проекты{% endblock %}
+{% block content %}
+<div class="box">
+    <div class="box-body">
+        <div class="container col-md-12">
+            <form method="post" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="col-xm-12"><h3>Редактирование "Портфолио"</h3></div>
+                <div class="col-xm-12 row margin-bottom-30">
+                    <h3 class="col-md-12 margin-bottom-20 page-header">Портфолио</h3>
+                    <div class="col-md-12 margin-bottom-15">
+                        <label>Описание</label>
+                        {{ portfolio.description }}
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <div class="form-group">
+                        <a href="" class="btn btn-default">Отменить</a>
+                        <button type="submit" class="btn btn-success">Сохранить</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="col-xm-12 row margin-bottom-30">
+                <h3 class="col-md-12 margin-bottom-20 page-header">Проекты</h3>
+                <div class="box-header with-border pull-right">
+                    <a class="btn btn-default" href="{% url 'project_create' %}">Добавить проект</a>
+                </div>
+                <div class="grid-view">
+                    <table id="ProjectTable" class="table table-striped table-bordered table-hover table_sort">
+                        <thead>
+                        <tr>
+                            <th class="col" style="min-width:20px">#</th>
+                            <th class="col" style="min-width:200px">Название</th>
+                            <th class="col" style="width: 100px; min-width:100px"></th>
+                        </tr>
+                        </thead>
+                        <tbody id="ProjectList">
+                        {% for project in project_list %}
+                        <tr onclick="">
+                            <td>{{ project.id }}</td>
+                            <td class="project-name">{{ project.name_project }}</td>
+                            <td class="text-center">
+                                <div class="btn-group pull-center">
+                                    <a class="btn btn-default btn-sm" href="" title="Редактировать" data-toggle="tooltip">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <a class="btn btn-default btn-sm" href="" onclick="return confirmDelete()" title="Удалить" data-toggle="tooltip">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

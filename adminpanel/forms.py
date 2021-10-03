@@ -58,12 +58,15 @@ class PortfolioForm(forms.ModelForm):
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['id', 'name_project', 'main_image']
+        fields = ['id', 'name_project', 'main_image', 'description']
         widgets = {
-            'name': forms.TextInput(attrs={
+            'name_project': forms.TextInput(attrs={
                 'class': 'form-control'
             }),
             'main_image': forms.FileInput(attrs={
+                'class': 'form-control'
+            }),
+            'description': forms.Textarea(attrs={
                 'class': 'form-control'
             }),
         }

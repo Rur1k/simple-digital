@@ -63,39 +63,41 @@
                 о нас
             </h2>
             <div class="us-desc">
-                <p>{{}}</p>
+                <p>{{ about.description }}</p>
             </div> 
             <div class="team-body">
+                {% for team in teams %}
                 <article class="team-item">
                     <a href="#">
-                    <img src="{% static 'website/img/2399702577_eef3176331_b.jpeg'%}" alt="photo" class="team-img">
+                    <img src="{{ team.photo.url }}" alt="photo" class="team-img">
                         <div class="team-desc">
-                            <h3 class="img-title">юля</h3>
-                            <h4 class="job-title">front-end developer</h4>
+                            <h3 class="img-title">{{ team.name }}</h3>
+                            <h4 class="job-title">{{ team.speciality }}</h4>
                             <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
                         </div>
                     </a>
                 </article>
-                <article class="team-item">
-                    <a href="#">
-                        <img src="{% static 'website/img/2399702577_eef3176331_b.jpeg'%}" alt="photo" class="team-img">
-                        <div class="team-desc">
-                            <h3 class="img-title">костя</h3>
-                            <h4 class="job-title">back-end developer</h4>
-                            <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                        </div>
-                    </a>
-                </article>
-                <article class="team-item">
-                    <a href="">
-                        <img src="{% static 'website/img/2399702577_eef3176331_b.jpeg'%}" alt="photo" class="team-img">
-                        <div class="team-desc">
-                            <h3 class="img-title">никита</h3>
-                            <h4 class="job-title">back-end developer</h4>
-                            <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                        </div>
-                    </a>
-                </article>
+                {% endfor %}
+<!--                <article class="team-item">-->
+<!--                    <a href="#">-->
+<!--                        <img src="{% static 'website/img/2399702577_eef3176331_b.jpeg'%}" alt="photo" class="team-img">-->
+<!--                        <div class="team-desc">-->
+<!--                            <h3 class="img-title">костя</h3>-->
+<!--                            <h4 class="job-title">back-end developer</h4>-->
+<!--                            <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </article>-->
+<!--                <article class="team-item">-->
+<!--                    <a href="">-->
+<!--                        <img src="{% static 'website/img/2399702577_eef3176331_b.jpeg'%}" alt="photo" class="team-img">-->
+<!--                        <div class="team-desc">-->
+<!--                            <h3 class="img-title">никита</h3>-->
+<!--                            <h4 class="job-title">back-end developer</h4>-->
+<!--                            <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </article>-->
             </div>
         </main>
         <!-- portfolio -->
@@ -105,7 +107,7 @@
                  портфолио
                 </h2>
                 <div class="us-desc">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quidem ducimus sequi, animi sed unde fugit dolore illum excepturi pariatur minus facere a dolores soluta ab corporis nemo libero tenetur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum necessitatibus debitis in vel natus atque magni animi autem eaque error adipisci, sequi nihil velit cupiditate quos ea magnam est maiores! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quidem ducimus sequi, animi sed unde fugit dolore illum excepturi pariatur minus facere a dolores soluta ab corporis nemo libero tenetur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum necessitatibus debitis in vel natus atque magni animi autem eaque error adipisci, sequi nihil velit cupiditate quos ea magnam est maiores!</p>
+                    <p>{{ portfolio.description }}</p>
                 </div> 
 
                 <!-- filters -->
@@ -122,42 +124,44 @@
                     </ul>
                   </section>
                 <div class="portfolio-body">
+                    {% for project in projects %}
                     <article class="portfolio-item">
                         <a href="#">
-                         <img src="https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/602f2109a787c146dcbe2b66_601b1c1f7567a7399353fe47_traackr.jpeg" alt="screen" class="portfolio-image">
-                        <div class="overlay">Project name</div>
+                         <img src="{{ project.main_image.url }}" alt="screen" class="portfolio-image">
+                        <div class="overlay">{{ project.name_project }}</div>
                         </a>
                     </article>
-                    <article class="portfolio-item">
-                        <a href="#">
-                         <img src="https://assets.awwwards.com/awards/images/2013/05/html5-video-01.jpg" alt="screen" class="portfolio-image">
-                        <div class="overlay">Project name</div>
-                        </a>
-                    </article>
-                    <article class="portfolio-item">
-                        <a href="#">
-                         <img src="https://wpblog.zyro.com/cdn-cgi/image/w=1200,q=85/wp-content/uploads/2021/03/14_Best_Business_Website_Examples_of_2021.png" alt="screen" class="portfolio-image">
-                        <div class="overlay">Project name</div>
-                        </a>
-                    </article>
-                    <article class="portfolio-item">
-                        <a href="#">
-                         <img src="https://assets.awwwards.com/awards/submissions/2020/12/5fe33f9d63356856908161.png" alt="screen" class="portfolio-image">
-                        <div class="overlay">Project name</div>
-                        </a>
-                    </article>
-                    <article class="portfolio-item">
-                        <a href="#">
-                         <img src="https://i.pinimg.com/736x/67/1d/88/671d88add924d009735cd2cc9d9eb327.jpg" alt="screen" class="portfolio-image">
-                        <div class="overlay">Project name</div>
-                        </a>
-                    </article>
-                    <article class="portfolio-item">
-                        <a href="#">
-                         <img src="https://rapidweblaunch.com/wp-content/uploads/2021/08/teamone-security-website-example-1.jpg" alt="screen" class="portfolio-image">
-                        <div class="overlay">Project name</div>
-                        </a>
-                    </article>
+                    {% endfor %}
+<!--                    <article class="portfolio-item">-->
+<!--                        <a href="#">-->
+<!--                         <img src="https://assets.awwwards.com/awards/images/2013/05/html5-video-01.jpg" alt="screen" class="portfolio-image">-->
+<!--                        <div class="overlay">Project name</div>-->
+<!--                        </a>-->
+<!--                    </article>-->
+<!--                    <article class="portfolio-item">-->
+<!--                        <a href="#">-->
+<!--                         <img src="https://wpblog.zyro.com/cdn-cgi/image/w=1200,q=85/wp-content/uploads/2021/03/14_Best_Business_Website_Examples_of_2021.png" alt="screen" class="portfolio-image">-->
+<!--                        <div class="overlay">Project name</div>-->
+<!--                        </a>-->
+<!--                    </article>-->
+<!--                    <article class="portfolio-item">-->
+<!--                        <a href="#">-->
+<!--                         <img src="https://assets.awwwards.com/awards/submissions/2020/12/5fe33f9d63356856908161.png" alt="screen" class="portfolio-image">-->
+<!--                        <div class="overlay">Project name</div>-->
+<!--                        </a>-->
+<!--                    </article>-->
+<!--                    <article class="portfolio-item">-->
+<!--                        <a href="#">-->
+<!--                         <img src="https://i.pinimg.com/736x/67/1d/88/671d88add924d009735cd2cc9d9eb327.jpg" alt="screen" class="portfolio-image">-->
+<!--                        <div class="overlay">Project name</div>-->
+<!--                        </a>-->
+<!--                    </article>-->
+<!--                    <article class="portfolio-item">-->
+<!--                        <a href="#">-->
+<!--                         <img src="https://rapidweblaunch.com/wp-content/uploads/2021/08/teamone-security-website-example-1.jpg" alt="screen" class="portfolio-image">-->
+<!--                        <div class="overlay">Project name</div>-->
+<!--                        </a>-->
+<!--                    </article>-->
             </div>
             <div class="more-work">
                 <button class="portfolio-btn">

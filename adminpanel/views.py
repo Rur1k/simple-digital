@@ -33,8 +33,10 @@ def logout_admin(request):
 
 def website_main(request):
     data = {
-        'about': About.objects
-        'teams': Team.objects.all()
+        'about': About.objects.all().first(),
+        'teams': Team.objects.all(),
+        'portfolio': Portfolio.objects.all().first(),
+        'projects': Project.objects.all(),
     }
     return render(request, 'adminpanel/website/index.html', data)
 
@@ -71,3 +73,37 @@ def about(request):
         'teams': formset
     }
     return render(request, 'adminpanel/maininfo/about.html', data)
+
+def projects(request):
+    portfolio = Portfolio.objects.all().first()
+    project_list = Project.objects.all()
+
+    if request.method == "POST":
+        portfolio_form = PortfolioForm(request.POST, request.FILES, instance=portfolio)
+        if portfolio_form.is_valid():
+            portfolio_form.save()
+
+        return redirect('projects')
+    else:
+        portfolio_form = PortfolioForm(instance=portfolio)
+
+    data = {
+        'portfolio': portfolio_form,
+        'project_list': project_list,
+    }
+    return render(request, 'adminpanel/maininfo/projects.html', data)
+
+def project_create(request):
+    if request.method == "POST":
+        form = ProjectForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+
+        return redirect('projects')
+    else:
+        form = ProjectForm()
+
+    data = {
+        'form': form,
+    }
+    return render(request, 'adminpanel/maininfo/create_project.html', data)

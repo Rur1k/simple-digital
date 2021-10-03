@@ -25,6 +25,7 @@ class Project(models.Model):
     id = models.AutoField(unique=True, primary_key=True)
     name_project = models.CharField('Имя проекта', max_length=64, null=True, blank=True)
     main_image = models.ImageField(upload_to='static/img/website/projects', null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
 
 class Service(models.Model):
     id = models.AutoField(unique=True, primary_key=True)
