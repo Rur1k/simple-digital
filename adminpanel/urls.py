@@ -3,6 +3,7 @@ from adminpanel import views
 
 urlpatterns = [
     path('', views.admin, name='admin'),
+    path('about', views.about, name='about'),
 
     # Авторизация
     path('login/', views.login_admin, name='login_admin'),

@@ -38,7 +38,7 @@
                                     <a href="#portfolio" class="header__link">портфолио</a>
                                 </li>
                                 <li>
-                                    <a href="#contact" class="header__link">услуги</a>
+                                    <a href="#services" class="header__link">услуги</a>
                                 </li>
                                 <li>
                                     <a href="#contact" class="header__link">обратная связь</a>
@@ -63,32 +63,38 @@
                 о нас
             </h2>
             <div class="us-desc">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quidem ducimus sequi, animi sed unde fugit dolore illum excepturi pariatur minus facere a dolores soluta ab corporis nemo libero tenetur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum necessitatibus debitis in vel natus atque magni animi autem eaque error adipisci, sequi nihil velit cupiditate quos ea magnam est maiores! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quidem ducimus sequi, animi sed unde fugit dolore illum excepturi pariatur minus facere a dolores soluta ab corporis nemo libero tenetur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum necessitatibus debitis in vel natus atque magni animi autem eaque error adipisci, sequi nihil velit cupiditate quos ea magnam est maiores!</p>
+                <p>{{}}</p>
             </div> 
             <div class="team-body">
                 <article class="team-item">
+                    <a href="#">
                     <img src="{% static 'website/img/2399702577_eef3176331_b.jpeg'%}" alt="photo" class="team-img">
-                    <div class="team-desc">
-                        <h3 class="img-title">юля</h3>
-                        <h4 class="job-title">front-end developer</h4>
-                        <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                    </div>
+                        <div class="team-desc">
+                            <h3 class="img-title">юля</h3>
+                            <h4 class="job-title">front-end developer</h4>
+                            <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                        </div>
+                    </a>
                 </article>
                 <article class="team-item">
-                    <img src="{% static 'website/img/2399702577_eef3176331_b.jpeg'%}" alt="photo" class="team-img">
-                    <div class="team-desc">
-                        <h3 class="img-title">костя</h3>
-                        <h4 class="job-title">back-end developer</h4>
-                        <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                    </div>
+                    <a href="#">
+                        <img src="{% static 'website/img/2399702577_eef3176331_b.jpeg'%}" alt="photo" class="team-img">
+                        <div class="team-desc">
+                            <h3 class="img-title">костя</h3>
+                            <h4 class="job-title">back-end developer</h4>
+                            <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                        </div>
+                    </a>
                 </article>
                 <article class="team-item">
-                    <img src="{% static 'website/img/2399702577_eef3176331_b.jpeg'%}" alt="photo" class="team-img">
-                    <div class="team-desc">
-                        <h3 class="img-title">никита</h3>
-                        <h4 class="job-title">back-end developer</h4>
-                        <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-                    </div>
+                    <a href="">
+                        <img src="{% static 'website/img/2399702577_eef3176331_b.jpeg'%}" alt="photo" class="team-img">
+                        <div class="team-desc">
+                            <h3 class="img-title">никита</h3>
+                            <h4 class="job-title">back-end developer</h4>
+                            <p class="img-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                        </div>
+                    </a>
                 </article>
             </div>
         </main>
@@ -101,57 +107,135 @@
                 <div class="us-desc">
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quidem ducimus sequi, animi sed unde fugit dolore illum excepturi pariatur minus facere a dolores soluta ab corporis nemo libero tenetur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum necessitatibus debitis in vel natus atque magni animi autem eaque error adipisci, sequi nihil velit cupiditate quos ea magnam est maiores! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quidem ducimus sequi, animi sed unde fugit dolore illum excepturi pariatur minus facere a dolores soluta ab corporis nemo libero tenetur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum necessitatibus debitis in vel natus atque magni animi autem eaque error adipisci, sequi nihil velit cupiditate quos ea magnam est maiores!</p>
                 </div> 
-                <!-- carousel -->
-                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" style="display: none;" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" style="display: none;" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" style="display: none;" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                <!-- filters -->
+                <section class="tags">
+                    <ul class="tags-list">
+                      <li class="tags-item"><a href="#0" class="tags-link">UX/UI</a></li>
+                      <li class="tags-item"><a href="#0" class="tags-link">HTML/CSS</a></li>
+                      <li class="tags-item"><a href="#0" class="tags-link">Python</a></li>
+                      <li class="tags-item"><a href="#0" class="tags-link">JS</a></li>
+                      <li class="tags-item"><a href="#0" class="tags-link">Bots</a></li>
+                      <li class="tags-item"><a href="#0" class="tags-link">Tag name</a></li>
+                      <li class="tags-item"><a href="#0" class="tags-link">Tag name</a></li>
+                      <li class="tags-item"><a href="#0" class="tags-link">Tag name</a></li>    
+                    </ul>
+                  </section>
+                <div class="portfolio-body">
+                    <article class="portfolio-item">
+                        <a href="#">
+                         <img src="https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/602f2109a787c146dcbe2b66_601b1c1f7567a7399353fe47_traackr.jpeg" alt="screen" class="portfolio-image">
+                        <div class="overlay">Project name</div>
+                        </a>
+                    </article>
+                    <article class="portfolio-item">
+                        <a href="#">
+                         <img src="https://assets.awwwards.com/awards/images/2013/05/html5-video-01.jpg" alt="screen" class="portfolio-image">
+                        <div class="overlay">Project name</div>
+                        </a>
+                    </article>
+                    <article class="portfolio-item">
+                        <a href="#">
+                         <img src="https://wpblog.zyro.com/cdn-cgi/image/w=1200,q=85/wp-content/uploads/2021/03/14_Best_Business_Website_Examples_of_2021.png" alt="screen" class="portfolio-image">
+                        <div class="overlay">Project name</div>
+                        </a>
+                    </article>
+                    <article class="portfolio-item">
+                        <a href="#">
+                         <img src="https://assets.awwwards.com/awards/submissions/2020/12/5fe33f9d63356856908161.png" alt="screen" class="portfolio-image">
+                        <div class="overlay">Project name</div>
+                        </a>
+                    </article>
+                    <article class="portfolio-item">
+                        <a href="#">
+                         <img src="https://i.pinimg.com/736x/67/1d/88/671d88add924d009735cd2cc9d9eb327.jpg" alt="screen" class="portfolio-image">
+                        <div class="overlay">Project name</div>
+                        </a>
+                    </article>
+                    <article class="portfolio-item">
+                        <a href="#">
+                         <img src="https://rapidweblaunch.com/wp-content/uploads/2021/08/teamone-security-website-example-1.jpg" alt="screen" class="portfolio-image">
+                        <div class="overlay">Project name</div>
+                        </a>
+                    </article>
+            </div>
+            <div class="more-work">
+                <button class="portfolio-btn">
+                    Больше проектов
+                </button>
+        </div>
+        </section>
+        <!-- services -->
+        <section id="services" class="services side-padding">
+            <h2 class="section-title">
+                услуги
+            </h2>
+            <div class="services-body">
+                <article class="services-item">
+                    <div class="services-title">
+                        <h3>Branding</h3>
+                        <img src="{% static 'website/img/pencil-case.svg'%}" alt="icon">
                     </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="https://www.designyourway.net/diverse/5/coolwebsites/katvig_dk_en.jpg" class="d-block w-100" alt="first">
-                        <div class="portfolio-btn">
-                            <a href="#" class="ptfl-btn">Подробнее</a>
-                        </div>
-                        <div class="carousel-caption d-none d-md-block">
-                          <!-- <h5>Проект 1</h5>
-                          <p>Краткое описание проекта. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus sunt porro laboriosam pariatur eum! Exercitationem, suscipit repellat enim maiores placeat, fuga consequuntur nostrum doloribus officiis reprehenderit voluptas vitae perspiciatis est!</p> -->
-                        </div>
-                      </div>
-                      <div class="carousel-item" data-bs-interval="2000">
-                        <img src="https://www.hebergementwebs.com/image/c6/c69eda98db89ddd6d6ae635b79fba674.jpg/22-idees-de-modeles-de-conception-de-sites-web-sympas-that-you-should-check-2021-17.jpg" class="d-block w-100" alt="second">
-                        <div class="portfolio-btn">
-                            <a href="#" class="ptfl-btn">Подробнее</a>
-                        </div>
-                        <div class="carousel-caption d-none d-md-block">
-                          <!-- <h5>Проект 2</h5>
-                          <p>Краткое описание проекта. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus sunt porro laboriosam pariatur eum! Exercitationem, suscipit repellat enim maiores placeat, fuga consequuntur nostrum doloribus officiis reprehenderit voluptas vitae perspiciatis est!</p> -->
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://www.dsignclub.com/assets/img/blog/7dca3485e6e9e9924cecde349d24d44d.jpg" class="d-block w-100" alt="third">
-                        <div class="portfolio-btn">
-                            <a href="#" class="ptfl-btn">Подробнее</a>
-                        </div>
-                        <div class="carousel-caption d-none d-md-block">
-                          <!-- <h5>Проект 3</h5>
-                          <p>Краткое описание проекта. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus sunt porro laboriosam pariatur eum! Exercitationem, suscipit repellat enim maiores placeat, fuga consequuntur nostrum doloribus officiis reprehenderit voluptas vitae perspiciatis est!</p> -->
-                        </div>
-                      </div>
+                    <p class="services-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, dolore reiciendis corporis ipsa fugiat asperiores esse, quasi debitis illum beatae quam aliquid rerum repellat commodi, ullam porro! Cumque, magni facilis!</p>
+                    <a href="#" class="services-btn">подробнее >></a>
+                </article>
+                <article class="services-item">
+                    <div class="services-title">
+                        <h3>design</h3>
+                        <img src="{% static 'website/img/graphic-design.svg'%}" alt="icon">
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                <!-- carousel end -->
+                    <p class="services-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, dolore reiciendis corporis ipsa fugiat asperiores esse, quasi debitis illum beatae quam aliquid rerum repellat commodi, ullam porro! Cumque, magni facilis!</p>
+                    <a href="#" class="services-btn">подробнее >></a>
+                </article>
+                <article class="services-item">
+                    <div class="services-title">
+                        <h3>development</h3>
+                        <img src="{% static 'website/img/coding.png'%}" alt="icon">
+                    </div>
+                    <p class="services-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, dolore reiciendis corporis ipsa fugiat asperiores esse, quasi debitis illum beatae quam aliquid rerum repellat commodi, ullam porro! Cumque, magni facilis!</p>
+                    <a href="#" class="services-btn">подробнее >></a>
+                </article>
             </div>
         </section>
+        <!-- contact -->
+        <section id="contact" class="contact">
+            <div class="contact-container side-padding">
+               <h2 class="section-title">
+                связаться с нами
+                </h2>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <label for="first-name" class="label">Имя</label>
+                <input type="text" name="first-name" value="" placeholder="Ваше имя" required/>
+                <label for="email" class="label">Email</label>
+                <input type="text" name="email" value="" placeholder="Ваш email" required/>
+                <label for="country" class="label">Страна</label>          
+                <select name="country" id="">
+                    <option value="RU">Россия</option>
+                    <option value="UA">Украина</option>
+                    <option value="USA">США</option>
+                    <option value="other">Другое</option>
+                </select>
+                <label for="subject" class="label">Краткое описание проекта</label>
+                <textarea name="subject" placeholder="Опишите Ваш проект" style="height:200px"></textarea>
+                <button type="submit" class="submit">Отправить</button>
+            </form>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-social">
+                <h3>Подпишитесь на нас</h3>
+                <address class="social-icons">
+                  <ul class="social-list">
+                    <li class="social-item"><a href="#" class="social-link"><i class="fab fa-vk"></i></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><i class="fab fa-github"></i></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><i class="fab fa-telegram-plane"></i></a></li>   
+                  </ul>
+                </address>
+              </div>
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         <script src="{% static 'website/js/script.js'%}"></script>
     </body>

@@ -1,0 +1,52 @@
+{% extends 'adminpanel/base.html' %}
+{% load static %}
+{% block title %}О нас{% endblock %}
+{% block page_name %}О нас{% endblock %}
+{% block mini_page_name %}О нас{% endblock %}
+{% block content %}
+<div class="box">
+    <div class="box-body">
+        <form method="post" action="" enctype="multipart/form-data">
+            <div class="container col-md-12">
+            {% csrf_token %}
+            {{ teams.management_form }}
+            <div class="col-xm-12"><h3>Редактирование информации "О нас"</h3></div>
+            <div class="col-xm-12 row margin-bottom-30">
+                <h3 class="col-md-12 margin-bottom-20 page-header">Информация</h3>
+                    <div class="col-md-12 margin-bottom-15">
+                        <label>Описание</label>
+                        {{ about.description }}
+                    </div>
+            </div>
+            <div class="col-xm-12 row margin-bottom-30">
+                <h3 class="col-md-12 margin-bottom-20 page-header">Команда</h3>
+                {% for team in teams %}
+                <div class="col-md-4 margin-bottom-20">
+                    <div class="margin-bottom-15 near-img">
+                        {% if team.instance.photo %}
+                        <img src="{{ team.instance.photo.url }}" class="margin-bottom-15">
+                        {% else %}
+                        <img src="{% static 'default.jpg' %}" class="margin-bottom-15">
+                        {% endif %}
+                        <label>Фото</label>
+                        {{ team.photo }}
+                    </div>
+                    <label>Имя</label>
+                    {{ team.id }}
+                    {{ team.name }}
+                    <label>Специальность</label>
+                    {{ team.speciality }}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-12 text-center">
+                <div class="form-group">
+                    <a href="" class="btn btn-default">Отменить</a>
+                    <button type="submit" class="btn btn-success">Сохранить</button>
+                </div>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

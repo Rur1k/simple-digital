@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-from .forms import LoginForm
+from django.forms import modelformset_factory
+from .models import *
+from .forms import *
 
 # Логика входа в админку
 def login_admin(request):
@@ -30,7 +32,42 @@ def logout_admin(request):
         return redirect('login_admin')
 
 def website_main(request):
-    return render(request, 'adminpanel/website/index.html')
+    data = {
+        'about': About.objects
+        'teams': Team.objects.all()
+    }
+    return render(request, 'adminpanel/website/index.html', data)
 
 def admin(request):
     return  render(request, 'adminpanel/statistics.html')
+
+def about(request):
+    about_info = About.objects.all().first()
+    teams = Team.objects.all()
+    num_extra = 3 - teams.count()
+    team_from = modelformset_factory(Team, form=TeamForm, extra=num_extra)
+
+    if request.method == "POST":
+        print(request.POST)
+        about_info_form = AboutForm(request.POST, request.FILES, instance=about_info)
+        formset = team_from(request.POST, request.FILES, queryset=teams)
+        if about_info_form.is_valid():
+            about_info_form.save()
+
+        print(formset)
+        if formset.is_valid():
+            formset.save()
+        else:
+            print('Формсет не валидный ')
+            print(formset.errors)
+
+        return redirect('about')
+    else:
+        about_info_form = AboutForm(instance=about_info)
+        formset = team_from(queryset=teams)
+
+    data = {
+        'about': about_info_form,
+        'teams': formset
+    }
+    return render(request, 'adminpanel/maininfo/about.html', data)
